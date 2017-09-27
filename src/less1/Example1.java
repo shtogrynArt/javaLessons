@@ -8,7 +8,7 @@ public class Example1 {
         int result;
         result = checkNumber(6);
         if (result == checkNumber()) {
-            System.out.println("Дорівнює");
+            System.out.println("Дорівнює:");
         } else {
             System.out.println("Не дорівнює");
         }
