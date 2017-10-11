@@ -6,6 +6,7 @@ import java.util.List;
 
 class Dispersion {
 
+    //Стандартне лінійне відхилення
     public static void randomize(List<int[]> intList) {
         List<int[]> randomizedList = new ArrayList<>();
         List<int[]> tmpSubList = new ArrayList<>(intList);

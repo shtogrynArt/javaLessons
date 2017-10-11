@@ -17,14 +17,16 @@ public class CoefficientUtil {
         return (double) variance / (double) (N);
     }
 
-    private static double calcStandardDeviation(int[] values) {
-        double denom = 0;
+    //Отримання відхилення для велчини ексцесу
+    private static double calculateStandardDeviation(int[] values) {
+        double d = 0;
         for (int i = 0; i < values.length; i++) {
-            denom += pow((values.length / 2), 2);
+            d += pow((values.length / 2), 2);
         }
-        return sqrt(denom / (values.length - 1));
+        return sqrt(d / (values.length - 1));
     }
 
+    //Розрахунок асиметрії
     static double calculateAsymm(int N,
                                  int[] values) {
         double sd = sqrt(calculateVariants(N, values));
@@ -38,12 +40,13 @@ public class CoefficientUtil {
         return (1.0 / (sd * sd * sd * N) * asymmetry);
     }
 
+    //Розрахунок ексцесу
     static double calculateAxcess(int[] values) {
         double st = 0;
         for (int i = 0; i < values.length; i++) {
             st += pow((values.length / 2), 4);
         }
-        double res = pow(calcStandardDeviation(values), 4);
+        double res = pow(calculateStandardDeviation(values), 4);
         return st / ((values.length - 1) * res);
     }
 }

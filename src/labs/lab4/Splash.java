@@ -7,6 +7,7 @@ public class Splash {
 
     private static final int N[] = new int[10];
 
+    //Заповнюємо темпові дані
     private static int[] fillArray() {
         for (int i = 0; i < N.length; i++) {
             N[i] = (int) (5 * Math.random());

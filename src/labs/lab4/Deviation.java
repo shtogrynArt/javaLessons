@@ -2,6 +2,7 @@ package labs.lab4;
 
 class Deviation {
 
+    //Розрахунок квадратичного відхилення
     static void squaredDeviation(final int[] values) {
         int sum = 0;
         int max = 0;
